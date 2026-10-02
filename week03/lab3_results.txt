@@ -1,0 +1,31 @@
+Names: (your name and your lab partner's name)
+Lab: Week 3 (Tokens and Meaning)
+Date:
+
+Answer without using GenAI. There's no right or wrong answer; base your
+answers on what you actually saw in this lab.
+
+1. Tokens (Tasks 1 and 2): Which of your strings split the way you guessed,
+   and which surprised you? Why can't a model reliably count the letters in
+   "strawberry"?
+
+
+
+2. Numbers (Task 4): What did the model answer for 3947 × 6281, and how do
+   the three-digit chunks explain the mistake? Is this a failure of
+   perception or of reasoning?
+
+
+
+3. Meaning (Tasks 5 and 6): Which of your similarity predictions was furthest
+   off? Explain in a sentence or two why "rich" and "poor" sit close together
+   in embedding space.
+
+
+
+4. Search (Task 7): What query fooled your search, and what did it return?
+   Where would you add a plain keyword check to catch what the embeddings
+   blur together?
+
+
+

@@ -1,0 +1,3 @@
+# Every Python package the CS238 labs use. From your cs238 folder:
+#   uv add -r cs238-labs/requirements.txt
+illustrating-genai-examples @ git+https://github.com/abuach/illustrating-genai-examples
