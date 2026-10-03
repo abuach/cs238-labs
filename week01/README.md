@@ -41,7 +41,7 @@ Run every script below from inside this folder with `uv run`. When a script draw
 uv run check_setup.py
 ```
 
-**Checkpoint:** You should see `Talking to: http://ollama2.cs.wallawalla.edu:11434` and a short definition. If you get a connection error, check that you're on the campus network (or VPN) and that you finished step 6 of Getting Started. Working locally? Make sure the Ollama app is running.
+**Checkpoint:** You should see `Talking to: http://ollama2.cs.wallawalla.edu:11434` and a short definition. If you get a connection error, check that you're on the campus network (or VPN) and that you finished step 5 of Getting Started. Working locally? Make sure the Ollama app is running.
 
 **Task 0 (the chapter's Warm-Up):** Run it two more times. The wording drifts a little on each run. Chapter 2 explains exactly why; for now, just notice it.
 
