@@ -1,4 +1,4 @@
-"""Week 2 · Part 2.1: temperature, the chapter's sweep.
+"""Week 2 · Part 1.1: temperature, the chapter's sweep.
 
 Run it twice:  uv run temperature.py
 """

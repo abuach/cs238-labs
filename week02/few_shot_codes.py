@@ -1,6 +1,6 @@
-"""Week 2 · Part 3.3: when do examples earn their tokens?
+"""Week 2 · Part 2: when do examples earn their tokens?
 
-The same five questions, but the labels are meaningless codes: Q1 is
+Five student questions, but the labels are meaningless codes: Q1 is
 logistics, Q2 conceptual, Q3 debugging. First with no examples, then with
 three. Run from this folder:  uv run few_shot_codes.py
 """

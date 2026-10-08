@@ -1,4 +1,4 @@
-"""Week 2 · Part 5: the reasoning ladder.
+"""Week 2 · Part 4: the reasoning ladder.
 
 Misguided attention, chain of thought, and step-back prompting.
 Run from this folder:  uv run reasoning.py

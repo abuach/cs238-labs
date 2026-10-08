@@ -1,4 +1,4 @@
-"""Week 2 · Part 4: the pink elephant.
+"""Week 2 · Part 3: the pink elephant.
 
 A ban has to name the thing it forbids, and naming it makes the model more
 likely to say it. Run from this folder:  uv run pink_elephant.py

@@ -1,4 +1,4 @@
-"""Week 2 · Part 2.3: count the answers.
+"""Week 2 · Part 1.3: count the answers.
 
 Ask for an animal six times at each temperature and count what comes back.
 Run from this folder:  uv run count_animals.py

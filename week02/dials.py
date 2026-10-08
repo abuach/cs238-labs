@@ -1,4 +1,4 @@
-"""Week 2 · Part 2.2: seeing the dials.
+"""Week 2 · Part 1.2: seeing the dials.
 
 Temperature reshapes the odds; top-k and top-p trim which words are allowed.
 Run from this folder:  uv run dials.py

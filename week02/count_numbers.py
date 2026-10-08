@@ -1,4 +1,4 @@
-"""Week 2 · Part 2.3: count the "random" numbers.
+"""Week 2 · Part 1.3: count the "random" numbers.
 
 Predict what you'll see at temperature 2.0 before you run it:
     uv run count_numbers.py

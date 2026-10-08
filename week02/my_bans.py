@@ -1,4 +1,4 @@
-"""Week 2 · Task 4: set your own pink-elephant traps (the chapter's Exercise 4).
+"""Week 2 · Task 3: set your own pink-elephant traps (the chapter's Exercise 4).
 
 Write two negative instructions of your own on the marked lines, each forbidding
 a word strongly tied to its topic. Then rewrite one as a positive instruction

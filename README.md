@@ -92,7 +92,7 @@ The class server is shared, so please follow the [server guidelines](https://git
    ```
 4. Run each script from inside that folder with `uv run`:
    ```bash
-   uv run framings.py
+   uv run temperature.py
    ```
 
 A few things that hold for every lab:
