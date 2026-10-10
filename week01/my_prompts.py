@@ -15,4 +15,11 @@ anything = "My favorite thing to eat is"     # ← your "almost anything" senten
 
 for name, prompt in [("sure", sure), ("anything", anything)]:
     dist = next_token_distribution(prompt, model=MODEL, top_k=6)
+    print(f'Your "{name}" sentence: "{prompt}"')
+    print("The model's top guesses for the next word")
+    print("(how likely the model thinks each one is to come next):")
+    for token, p in dist:
+        print(f'  "{token.strip()}"  {p:.1%}')
+    print(f"A chart of these guesses is opening (also saved as {name}.png).")
+    print("Close the chart window to continue.\n")
     plot_next_token(prompt, dist, HERE / f"{name}.png")

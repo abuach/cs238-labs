@@ -16,5 +16,7 @@ rewritten = (                                                    # ← your rewr
     "Format: A numbered list, one question and its answer per item."
 )
 
-print(f"── Original\n{ask(original, max_tokens=250, system=None)}\n")
-print(f"── Rewritten\n{ask(rewritten, max_tokens=250, system=None)}")
+print("── The model's answer to your ORIGINAL prompt:")
+print(ask(original, max_tokens=250, system=None).strip())
+print("\n── The model's answer to your REWRITTEN prompt:")
+print(ask(rewritten, max_tokens=250, system=None).strip())

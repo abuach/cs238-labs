@@ -101,13 +101,13 @@ A ban has to name the thing it forbids, and naming it makes the model *more* lik
 uv run pink_elephant.py
 ```
 
-**Task 3 (the chapter's Exercise 4):** Open `my_bans.py`. Replace the two example traps with your own, each forbidding a word strongly tied to its topic. Then replace the third entry with a *positive* rewrite of one of them that gives the model somewhere to go (the chapter's example: *"call it the gentle giant"* instead of *"do not say elephant"*).
+**Task 3 (the chapter's Exercise 4):** Open `my_bans.py`. Replace the two example traps with your own, each forbidding a word strongly tied to its topic, and put that word on the line after each prompt so the script can check for it. Then replace the third entry with a *positive* rewrite of one of them that gives the model somewhere to go (the chapter's example: *"call it the gentle giant"* instead of *"do not say elephant"*).
 
 ```bash
 uv run my_bans.py
 ```
 
-Count the leaks. Did the positive version do better?
+The script marks each reply LEAKED or Held. Did the positive version do better?
 
 ---
 

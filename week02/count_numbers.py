@@ -6,13 +6,22 @@ Predict what you'll see at temperature 2.0 before you run it:
 from collections import Counter
 from genai import ask
 
-def tally(prompt, temperature, n=6, **options):
-    """Ask the same question n times and count the distinct answers."""
+TRIES = 6
+
+def tally(prompt, temperature, **options):
+    """Ask the same question TRIES times and count the different answers."""
     answers = [ask(prompt, max_tokens=8,
                    options={"temperature": temperature, **options}).strip()
-               for _ in range(n)]
-    return dict(Counter(answers))
+               for _ in range(TRIES)]
+    return Counter(answers)
+
+def report(setting, counts):
+    print(f"{setting}: {len(counts)} different answer(s) in {TRIES} tries")
+    for answer, count in counts.most_common():
+        print(f'    "{answer}"  {count} of {TRIES} times')
+    print()
 
 prompt = "Pick a random number between 1 and 10. Reply with only the number."
+print(f'Asking "{prompt}" {TRIES} times at each temperature.\n')
 for temp in [0.0, 1.0, 2.0]:
-    print(f"temperature {temp}: {tally(prompt, temp)}")
+    report(f"Temperature {temp}", tally(prompt, temp))

@@ -4,7 +4,12 @@ Run from this folder:  uv run check_setup.py
 """
 from genai import ask, get_host
 
-print(f"Talking to: {get_host()}\n")
+print(f"Talking to: {get_host()}")
+print("(That's the Ollama server running the model.)\n")
+
+question = "What does generative mean?"
+print(f'Asking the model: "{question}"\n')
 
 # If this returns a response, your setup is working!
-print(ask("What does generative mean?"))
+print("The model's answer:")
+print(ask(question))

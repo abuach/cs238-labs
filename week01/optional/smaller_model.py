@@ -5,5 +5,9 @@ Run from the week01 folder:  uv run optional/smaller_model.py
 from genai import ask
 
 question = "What does generative mean?"
-for model in ["gemma4:latest", "llama3.2:1b"]:
-    print(f"── {model}\n{ask(question, model=model)}\n")
+print(f'Asking two models the same question: "{question}"\n')
+for model, size in [("gemma4:latest", "the larger model"),
+                    ("llama3.2:1b", "a much smaller model")]:
+    print(f"── Answer from {model} ({size}):")
+    print(ask(question, model=model))
+    print()

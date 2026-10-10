@@ -9,6 +9,9 @@ puzzle = ("Three people check into a hotel room that costs $30. "   # ← your p
           "Nobody pays anything extra or gets any refund. "
           "How much did the room cost?")
 
-print(f"── Asked plainly\n{ask(puzzle, model='llama3.2:latest', max_tokens=200)}\n")
-print(f"── Step by step\n"
-      f"{ask(puzzle + ' Let us think step by step.', model='llama3.2:latest', max_tokens=300)}")
+print(f"Your puzzle: {puzzle}\n")
+print("── llama3.2's answer when asked plainly:")
+print(ask(puzzle, model="llama3.2:latest", max_tokens=200).strip())
+print("\n── llama3.2's answer with \"Let's think step by step\" added:")
+print(ask(puzzle + " Let us think step by step.",
+          model="llama3.2:latest", max_tokens=300).strip())

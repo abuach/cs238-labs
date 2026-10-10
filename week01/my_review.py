@@ -9,5 +9,6 @@ review = "Oh great, another three-hour superhero movie."   # ← your review
 
 label = ask("Classify as POSITIVE, NEGATIVE, or MIXED. "
             f"One word.\n{review}")
-print(f"Review → {review}")
-print(f"Label  → {label}")
+print("We asked the model to label your review POSITIVE, NEGATIVE, or MIXED.\n")
+print(f"Your review:       {review}")
+print(f"The model's label: {label.strip()}")

@@ -15,9 +15,18 @@ prompt = "My favorite thing to eat is"    # ← one of your prompts
 long_shot = "spaghetti"                   # ← a candidate under 1%
 
 step1 = next_token_distribution(prompt, model=MODEL, top_k=10)
+print(f'The model\'s top 10 guesses for the word after "{prompt}"')
+print("(how likely the model thinks each one is to come next):")
 for token, p in step1:
-    print(f"{token!r:15} {p:6.1%}")
+    print(f'  "{token.strip()}"  {p:.1%}')
 
 step2 = next_token_distribution(prompt, model=MODEL, top_k=6,
                                 reply_start=long_shot)
+print(f'\nNow we write your long shot, "{long_shot}", as the start of the')
+print("model's own answer. Its top guesses for the word after that:")
+for token, p in step2:
+    print(f'  "{token.strip()}"  {p:.1%}')
+
+print("\nA chart of both steps is opening (also saved as long_shot.png).")
+print("Close the chart window to finish.")
 plot_two_step(prompt, long_shot, step1, step2, HERE / "long_shot.png")

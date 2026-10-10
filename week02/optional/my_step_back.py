@@ -9,6 +9,12 @@ from genai.prompting import step_back
 question = ("If it takes 5 machines 5 minutes to make 5 widgets, how many "   # ← yours
             "minutes would it take 100 machines to make 100 widgets?")
 
-print(f"── Asked cold\n{ask(question, max_tokens=100)}\n")
+print(f"Your question: {question}\n")
+print("── The model's answer when asked directly:")
+print(ask(question, max_tokens=100).strip())
+
 principle, answer = step_back(question)
-print(f"── Principle first\n{principle}\n\n{answer}")
+print("\n── Step-back, part 1: the model first names the general principle:")
+print(principle.strip())
+print("\n── Step-back, part 2: then it answers using that principle:")
+print(answer.strip())
