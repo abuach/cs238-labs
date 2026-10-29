@@ -71,13 +71,13 @@ Did your attack get the code out of either build? Did it dodge the keyword filte
 
 ## Part 2: Attacks That Ride In on Documents (8 minutes)
 
-*Indirect* injection hides the instruction inside a document the system was told to trust, so the attacker never has to type a thing. `indirect.py` asks the assistant to summarize a clean clinical note, then the same note with one planted sentence, then that poisoned note with the security policy on. Finally it asks for the code directly, and then in costume, as a line from a stage play.
+*Indirect* injection hides the instruction inside a document the system was told to trust, so the attacker never has to type a thing. `indirect.py` asks the assistant to summarize a clean clinical note, then the same note with one planted sentence, then that poisoned note with the security policy on. Finally, for comparison, it asks the same hardened assistant for the code directly.
 
 ```bash
 uv run indirect.py
 ```
 
-**Task 2:** Why did the security policy fail on the poisoned note, when it stopped the repeat attack in Part 1? (Hint: whose messages does the policy say to distrust?) And what changed between the direct ask and the stage-play "jailbreak"?
+**Task 2:** The hardened assistant refused when asked for the code directly, yet handed it over when the same request was planted in a note. Why did the security policy fail on the poisoned note? (Hint: whose messages does the policy say to distrust?) What would a system that reads web pages, emails, or uploaded files have to worry about?
 
 ---
 
