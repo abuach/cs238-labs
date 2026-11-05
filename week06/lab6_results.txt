@@ -1,0 +1,32 @@
+Names: (your name and your lab partner's name)
+Lab: Week 6 (Retrieval-Augmented Generation)
+Date:
+
+Answer without using GenAI. There's no right or wrong answer; base your
+answers on what you actually saw in this lab.
+
+1. The knowledge problem (Tasks 1 and 2): What did the model say about the
+   book without retrieval, and how did the answers change once it could
+   retrieve? What did it do on the question your two sections don't cover?
+
+
+
+2. Chunking (Task 3): Which chunk size worked better for the question, and
+   what went wrong with the other?
+
+
+
+3. Dense versus keyword (Task 4): Give one query where dense search found the
+   right note and keyword search didn't. What did each method do on a
+   question no note answers, and which way of failing would you rather have
+   in a real system? Why does a real system want both (hybrid search)?
+
+
+
+4. Grounding (Task 5): How many of your five syllabus questions did it get
+   right? Did any answer cite a source that didn't actually support it?
+   Grounding reduces hallucination; based on what you saw, why doesn't it
+   eliminate it?
+
+
+
