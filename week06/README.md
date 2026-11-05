@@ -126,7 +126,7 @@ This is the chapter's Exercise 5, "ask my syllabus." `my_syllabus.txt` in this f
 
 `my_syllabus.py` chunks your document and answers each question using *only* the passages it retrieves, with citations, and says it doesn't know when the answer isn't there.
 
-**Task 5:** Replace the questions in `my_syllabus.py` with five you actually care about, including one whose answer you *know* isn't in the document. Then run it:
+**Task 5:** Replace the questions in `my_syllabus.py` with three you actually care about, including one whose answer you *know* isn't in the document. Then run it:
 
 ```bash
 uv run my_syllabus.py
@@ -143,7 +143,7 @@ Open `lab6_results.txt` in this folder, fill in your names and the date, and ans
 1. **The knowledge problem (Tasks 1 and 2):** What did the model say about the book without retrieval, and how did the answers change once it could retrieve? What did it do on the question your two sections don't cover?
 2. **Chunking (Task 3):** Which chunk size worked better for the question, and what went wrong with the other?
 3. **Dense versus keyword (Task 4):** Give one query where dense search found the right note and keyword search didn't. What did each method do on a question no note answers, and which way of failing would you rather have in a real system? Why does a real system want both (hybrid search)?
-4. **Grounding (Task 5):** How many of your five syllabus questions did it get right? Did any answer cite a source that didn't actually support it? Grounding *reduces* hallucination; based on what you saw, why doesn't it eliminate it?
+4. **Grounding (Task 5):** How many of your three syllabus questions did it get right? Did any answer cite a source that didn't actually support it? Grounding *reduces* hallucination; based on what you saw, why doesn't it eliminate it?
 
 *There's no right or wrong answer here, I just want to see some thought go into the response. Base your answers on what you actually saw in this lab, and feel free to ask me any questions.*
 
