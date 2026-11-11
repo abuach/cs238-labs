@@ -147,7 +147,7 @@ The models each lab uses are all on the class server; the optional extras may no
 | 6 | Nov 3 & 5 | Retrieval-Augmented Generation | `gemma4`, `nomic-embed-text` | |
 | 7 | Nov 10 & 12 | Giving the Model Hands | `gemma4` | `qwen3` (5.2 GB), `llama3.2` |
 | 8 | Nov 17 & 19 | Giving the Model Eyes | `gemma4` | `llava` (4.7 GB) |
-| 9 | Nov 24 | Where Did the Time Go? | **runs on your own laptop:** `llama3.2`, `llama3.2:1b`, `qwen3:4b` | `llama3.2:1b-instruct-q4_K_M`, `-q8_0`, `-fp16` |
-| 10 | Dec 1 & 3 | Thinking Models | `qwen3:4b` (2.5 GB), `qwen2.5-coder` (4.7 GB) | `deepseek-r1` (5 GB) |
+| 9 | Dec 1 & 3 | Where Did the Time Go? | **runs on your own laptop:** `llama3.2`, `llama3.2:1b`, `qwen3:4b` | `llama3.2:1b-instruct-q4_K_M`, `-q8_0`, `-fp16` |
+| 10 | Dec 8 & 10 | Thinking Models | `qwen3:4b` (2.5 GB), `qwen2.5-coder` (4.7 GB) | `deepseek-r1` (5 GB) |
 
 A few optional exercises also download a model to your laptop the first time they run (BERT in Week 1, for example). Each lab says when.
