@@ -1,6 +1,7 @@
 Names: (your name and your lab partner's name)
 Lab: Week 8 (Giving the Model Eyes)
 Date:
+Sample images used (if any):
 
 Answer without using GenAI. There's no right or wrong answer; base your
 answers on what you actually saw in this lab.

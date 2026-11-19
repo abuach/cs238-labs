@@ -38,17 +38,21 @@ Run every script below from inside this folder with `uv run`. Every script passe
 
 **Working locally?** This lab uses `gemma4`; the optional second opinion also uses `gemma4:e2b`.
 
-### Bring Your Own Images (before lab, ~10 minutes)
+### Find Your Own Images (before lab, ~10 minutes)
 
-This week you supply the pictures. Take these photos with your phone and copy them to your computer as **JPG or PNG** files (on an iPhone, export or AirDrop them as "Most Compatible" so they aren't HEIC). Save them in this `week08` folder with exactly these names:
+This week you supply the pictures, and finding good ones is part of the task. The model's mistakes only teach you something when you know the right answer, so pick images where *you* know exactly what's in them. Save them in this `week08` folder as **JPG or PNG** files with exactly these names:
 
-| File | What it shows |
-|---|---|
-| `my_unusual.jpg` | Something a little unusual: a rare plant, an odd gadget, a pet of an unusual breed, or an object that looks like something else |
-| `my_pile3.jpg`, `my_pile12.jpg`, `my_pile25.jpg` | Three piles of coins (or paper clips, or buttons) on a plain table: **3**, **12**, and **25** objects. Let a few in the big pile touch or overlap, the way a real pile would. Count them carefully yourself! |
-| `my_photo1.jpg`, `my_photo2.jpg` | Two ordinary photos you'd be comfortable describing to a stranger (a room, a street, a meal) |
+| File | What to find | Tips |
+|---|---|---|
+| `my_unusual.jpg` | Something a little unusual: a rare plant, an odd tool or gadget, a pet of an unusual breed, or an object that looks like something else | Pick something you can name precisely. The less famous it is, the more likely the model is to guess wrong. A photo from the web is fine here. |
+| `my_pile3.jpg`, `my_pile12.jpg`, `my_pile25.jpg` | Three piles of coins (or paper clips, or buttons) on a plain table: **3**, **12**, and **25** objects | Take these yourself so you know the true count. Count each pile twice before you shoot it. Let a few in the big pile touch or overlap, the way a real pile would. |
+| `my_photo1.jpg`, `my_photo2.jpg` | Two ordinary photos you'd be comfortable describing to a stranger: a room, a street, a meal | Your own photos are best. Skip photos with other people's faces or private details: these go to the class server. |
 
-`.png` works too (`my_unusual.png`, and so on); the scripts look for either.
+You'll take two more images, the error screenshots, during Part 4.
+
+**Getting photos onto your computer:** email or upload them to yourself. On an iPhone, export or AirDrop them as "Most Compatible" so they come out as JPG, not HEIC. `.png` works too (`my_unusual.png`, and so on); the scripts look for either. **Web images:** right-click and save as JPG or PNG, not WebP.
+
+**Stuck?** The `samples/` folder has a backup for every image in this lab, described in [samples/README.md](samples/README.md). Copy one in under its `my_` name only for an image you can't get yourself, for example `cp samples/pile25.jpg my_pile25.jpg`, and say in `lab8_results.txt` which ones you used.
 
 ---
 
@@ -100,7 +104,7 @@ It ends with a `KeyError`. Take **two** screenshots of the traceback and save th
 1. `my_error_small.png`: the whole terminal window at its normal size.
 2. `my_error_big.png`: the same traceback after zooming the terminal text way up.
 
-On a campus computer (Ubuntu), press `Shift+Print Screen` to select an area (it saves to `~/Pictures/Screenshots`), and zoom the terminal text with `Ctrl+Shift++`. On a Mac, use `Cmd+Shift+4` and `Cmd++`; on Windows, `Win+Shift+S` and `Ctrl++`.
+On a campus computer (Ubuntu), press `Shift+Print Screen` to select an area (it saves to `~/Pictures/Screenshots`), and zoom the terminal text with `Ctrl+Shift++`. On a Mac, use `Cmd+Shift+4` and `Cmd++`; on Windows, `Win+Shift+S` and `Ctrl++`. (If screenshots won't save, copy in `samples/error_small.png` and `samples/error_big.png` instead.)
 
 `diagnose.py` asks the model to diagnose each screenshot:
 
@@ -149,7 +153,7 @@ Great work exploring multimodal AI! 🖼️
 
 The files for these are in the `optional/` folder. Run them from this `week08` folder.
 
-- **Two images at once.** Sketch a simple app screen on paper and photograph it as `my_sketch.jpg`, and photograph a list of what the app should do as `my_notes.jpg`, both in this folder. `optional/my_two_images.py` asks whether the design covers everything. Can the model reason *across* the two?
+- **Two images at once.** Sketch a simple app screen on paper and photograph it as `my_sketch.jpg`, and photograph a list of what the app should do as `my_notes.jpg`, both in this folder (or copy in `samples/sketch.jpg` and `samples/notes.jpg`). `optional/my_two_images.py` asks whether the design covers everything. Can the model reason *across* the two?
   ```bash
   uv run optional/my_two_images.py
   ```
@@ -157,7 +161,7 @@ The files for these are in the `optional/` folder. Run them from this `week08` f
   ```bash
   uv run optional/second_opinion.py
   ```
-- **Teach a model to listen.** Record a short voice memo and convert it to a 16 kHz mono WAV named `my_memo.wav` in this folder. On a Mac: `afconvert -f WAVE -d LEI16@16000 -c 1 memo.m4a my_memo.wav`; on Ubuntu: `ffmpeg -i memo.m4a -ar 16000 -ac 1 my_memo.wav`. Then transcribe it (the first run downloads a small Whisper model):
+- **Teach a model to listen.** Record a short voice memo and convert it to a 16 kHz mono WAV named `my_memo.wav` in this folder (or copy in `samples/memo.wav`). On a Mac: `afconvert -f WAVE -d LEI16@16000 -c 1 memo.m4a my_memo.wav`; on Ubuntu: `ffmpeg -i memo.m4a -ar 16000 -ac 1 my_memo.wav`. Then transcribe it (the first run downloads a small Whisper model):
   ```bash
   uv run optional/my_listen.py
   ```

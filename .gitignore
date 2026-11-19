@@ -2,3 +2,6 @@
 *.png
 __pycache__/
 .DS_Store
+
+# ...except the sample images the labs ship with
+!week*/samples/*.png
