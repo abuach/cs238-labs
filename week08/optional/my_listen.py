@@ -8,7 +8,13 @@ a small Whisper model. Run from the week08 folder:
 from pathlib import Path
 from genai import transcribe
 
-memo = Path(__file__).parent.parent / "my_memo.wav"
-print("Transcribing your voice memo (my_memo.wav)...\n")
+WEEK = Path(__file__).parent.parent
+memo = WEEK / "my_memo.wav"
+if memo.exists():
+    print("Transcribing your voice memo (my_memo.wav)...\n")
+else:
+    memo = WEEK / "samples" / "memo.wav"
+    print("No my_memo.wav found, so transcribing the sample samples/memo.wav.")
+    print("Save your own recording as my_memo.wav to use it instead.\n")
 print("What the model heard:")
 print(transcribe(memo))

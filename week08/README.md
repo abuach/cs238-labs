@@ -52,7 +52,7 @@ You'll take two more images, the error screenshots, during Part 4.
 
 **Getting photos onto your computer:** email or upload them to yourself. On an iPhone, export or AirDrop them as "Most Compatible" so they come out as JPG, not HEIC. `.png` works too (`my_unusual.png`, and so on); the scripts look for either. **Web images:** right-click and save as JPG or PNG, not WebP.
 
-**Stuck?** The `samples/` folder has a backup for every image in this lab, described in [samples/README.md](samples/README.md). Copy one in under its `my_` name only for an image you can't get yourself, for example `cp samples/pile25.jpg my_pile25.jpg`, and say in `lab8_results.txt` which ones you used.
+**Stuck?** The `samples/` folder has a backup for every image in this lab, described in [samples/README.md](samples/README.md). If a script can't find one of your `my_` files, it uses the matching sample and says so. That's meant for an image you really can't get yourself; say in `lab8_results.txt` which samples you used.
 
 ---
 
@@ -104,7 +104,7 @@ It ends with a `KeyError`. Take **two** screenshots of the traceback and save th
 1. `my_error_small.png`: the whole terminal window at its normal size.
 2. `my_error_big.png`: the same traceback after zooming the terminal text way up.
 
-On a campus computer (Ubuntu), press `Shift+Print Screen` to select an area (it saves to `~/Pictures/Screenshots`), and zoom the terminal text with `Ctrl+Shift++`. On a Mac, use `Cmd+Shift+4` and `Cmd++`; on Windows, `Win+Shift+S` and `Ctrl++`. (If screenshots won't save, copy in `samples/error_small.png` and `samples/error_big.png` instead.)
+On a campus computer (Ubuntu), press `Shift+Print Screen` to select an area (it saves to `~/Pictures/Screenshots`), and zoom the terminal text with `Ctrl+Shift++`. On a Mac, use `Cmd+Shift+4` and `Cmd++`; on Windows, `Win+Shift+S` and `Ctrl++`. (If screenshots won't save, the script uses the sample screenshots.)
 
 `diagnose.py` asks the model to diagnose each screenshot:
 
@@ -153,7 +153,7 @@ Great work exploring multimodal AI! 🖼️
 
 The files for these are in the `optional/` folder. Run them from this `week08` folder.
 
-- **Two images at once.** Sketch a simple app screen on paper and photograph it as `my_sketch.jpg`, and photograph a list of what the app should do as `my_notes.jpg`, both in this folder (or copy in `samples/sketch.jpg` and `samples/notes.jpg`). `optional/my_two_images.py` asks whether the design covers everything. Can the model reason *across* the two?
+- **Two images at once.** Sketch a simple app screen on paper and photograph it as `my_sketch.jpg`, and photograph a list of what the app should do as `my_notes.jpg`, both in this folder (or skip this and the script uses the samples). `optional/my_two_images.py` asks whether the design covers everything. Can the model reason *across* the two?
   ```bash
   uv run optional/my_two_images.py
   ```
@@ -161,7 +161,7 @@ The files for these are in the `optional/` folder. Run them from this `week08` f
   ```bash
   uv run optional/second_opinion.py
   ```
-- **Teach a model to listen.** Record a short voice memo and convert it to a 16 kHz mono WAV named `my_memo.wav` in this folder (or copy in `samples/memo.wav`). On a Mac: `afconvert -f WAVE -d LEI16@16000 -c 1 memo.m4a my_memo.wav`; on Ubuntu: `ffmpeg -i memo.m4a -ar 16000 -ac 1 my_memo.wav`. Then transcribe it (the first run downloads a small Whisper model):
+- **Teach a model to listen.** Record a short voice memo and convert it to a 16 kHz mono WAV named `my_memo.wav` in this folder (or skip this and the script uses the sample). On a Mac: `afconvert -f WAVE -d LEI16@16000 -c 1 memo.m4a my_memo.wav`; on Ubuntu: `ffmpeg -i memo.m4a -ar 16000 -ac 1 my_memo.wav`. Then transcribe it (the first run downloads a small Whisper model):
   ```bash
   uv run optional/my_listen.py
   ```

@@ -9,12 +9,16 @@ from genai import ask_image
 HERE = Path(__file__).parent
 
 def my_image(name):
-    """Find my_<name>.jpg, .jpeg, or .png in this folder."""
+    """Find my_<name>.jpg, .jpeg, or .png in this folder, or else use the sample."""
     for ext in (".png", ".jpg", ".jpeg", ".PNG", ".JPG", ".JPEG"):
         path = HERE / f"my_{name}{ext}"
         if path.exists():
             return path.read_bytes()
-    raise SystemExit(f"Couldn't find my_{name}.png (or .jpg) in {HERE}")
+    for path in sorted((HERE / "samples").glob(f"{name}.*")):
+        print(f"(No my_{name} found, so using the sample samples/{path.name}. "
+              f"Save your own as my_{name}.png to use it instead.)")
+        return path.read_bytes()
+    raise SystemExit(f"Couldn't find my_{name}.png or a sample in {HERE}")
 
 prompt = ("This is a terminal screenshot of a Python error. In 3-4 "
           "sentences: what error occurred, which line caused it, and "

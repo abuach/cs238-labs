@@ -1,16 +1,12 @@
 # Week 8 Sample Images
 
-These are backups for the lab, not the lab itself. Use your own images whenever you can. If you can't get one of them (no coins on hand, no phone with you), copy the matching sample into the `week08` folder under its `my_` name. For example, from the `week08` folder:
+These are backups for the lab, not the lab itself. Use your own images whenever you can.
 
-```bash
-cp samples/pile25.jpg my_pile25.jpg
-```
-
-On Windows PowerShell, `cp` works too; in the old Command Prompt, use `copy samples\pile25.jpg my_pile25.jpg`.
+You don't need to copy anything. When a script can't find one of your `my_` files in the `week08` folder, it uses the matching sample here and prints a note saying so. As soon as you save your own file (for example `my_pile25.jpg`), the script uses yours instead.
 
 If you use a sample for any task, say so in `lab8_results.txt`.
 
-| Sample | Copy it to | What it is |
+| Sample | Stands in for | What it is |
 |---|---|---|
 | `unusual.jpg` | `my_unusual.jpg` | A mandrill. The chapter's small model called it a gorilla. |
 | `photo1.jpg` | `my_photo1.jpg` | The chained library at Hereford Cathedral, from an old postcard |

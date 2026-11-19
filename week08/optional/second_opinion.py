@@ -11,12 +11,16 @@ WEEK = Path(__file__).parent.parent
 OBJECT = "coins"                                  # ← what you photographed
 
 def my_image(name):
-    """Find my_<name>.jpg, .jpeg, or .png in the week08 folder."""
+    """Find my_<name>.jpg, .jpeg, or .png in the week08 folder, or else use the sample."""
     for ext in (".jpg", ".jpeg", ".png", ".JPG", ".JPEG", ".PNG"):
         path = WEEK / f"my_{name}{ext}"
         if path.exists():
             return path.read_bytes()
-    raise SystemExit(f"Couldn't find my_{name}.jpg (or .png) in {WEEK}")
+    for path in sorted((WEEK / "samples").glob(f"{name}.*")):
+        print(f"(No my_{name} found, so using the sample samples/{path.name}. "
+              f"Save your own as my_{name}.jpg to use it instead.)")
+        return path.read_bytes()
+    raise SystemExit(f"Couldn't find my_{name}.jpg or a sample in {WEEK}")
 
 print(f"Two vision models, gemma4 and the much smaller gemma4:e2b, count the")
 print(f"{OBJECT} in your photos and read both of your error screenshots.")
