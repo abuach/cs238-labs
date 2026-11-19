@@ -1,0 +1,28 @@
+Names: (your name and your lab partner's name)
+Lab: Week 8 (Giving the Model Eyes)
+Date:
+
+Answer without using GenAI. There's no right or wrong answer; base your
+answers on what you actually saw in this lab.
+
+1. Confidence (Task 2): What was your unusual object, what did the model call
+   it, and did its tone ever match its accuracy?
+
+
+
+2. Counting (Task 3): Where was your counting cliff? Give the true and
+   reported counts for each pile, with and without counting one by one. Did a
+   second run give the same counts?
+
+
+
+3. Screenshots (Task 4): Compare the two diagnoses. What does this tell you
+   about pasting screenshots into an AI assistant instead of copying the text?
+
+
+
+4. Alt-text (Task 5): Write a better alt-text for one of your photos than the
+   model's, and explain what you changed and why.
+
+
+
